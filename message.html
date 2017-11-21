@@ -30,7 +30,7 @@
                 <li><a><i class="material-icons">home</i> Home</a></li>
                 <li><a><i class="material-icons">person_outline</i> My Profile</a></li>
                 <li><a><i class="material-icons">work</i> My Vacancies</a></li>
-                <li><a><i class="material-icons">chat</i> Message</a></li>
+                <li><a href="message.html"><i class="material-icons">chat</i> Message</a></li>
                 <li><a><i class="material-icons">subscriptions</i> Subscription</a></li>
                 <li><a><i class="material-icons">notifications</i> Notification</a></li>
                 <li><a><i class="material-icons">settings</i> Settings</a></li>
@@ -44,7 +44,7 @@
       </nav>
       <div class="container">
         <ul class="collection">
-          <li class="collection-item message-list avatar">
+          <li class="collection-item avatar">
             <img src="img/profile_user.jpg" alt="" class="circle">
             <span class="title">Given Danguru</span>
             <p>Even at this stage, I hope I’ve demonstrated how Pusher and React work well together.
@@ -59,6 +59,10 @@
       <script type="text/javascript" src="js/materialize.min.js"></script>
       <script>
         $(".button-collapse").sideNav();
+
+        $(".collection-item").on('click', function(){
+             window.location = "conversation.html";
+        });
       </script>
     </body>
   </html>

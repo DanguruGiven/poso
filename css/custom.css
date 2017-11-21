@@ -62,8 +62,11 @@ body{}
   padding: 0;
   text-transform: capitalize;
 }
-.collection .message-list{
-  border-bottom: 2px solid #ccc;
+.collection .collection-item{
+  border-radius: 1px solid #ccc;
+}
+.title{
+  font-weight: bold;
 }
 /*Drawer Stylesheet*/
 .background{

@@ -1,0 +1,50 @@
+.receiver-bubble{
+  width: auto;
+  height: auto;
+  background-color: #ccc;
+  border-radius: 10px;
+  padding: 0 5px;
+}
+.reciever-text{
+  color: #2d2d2d;
+  font-size: 15px;
+  padding: 5px;
+}
+.last-seen-title{
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+  color: #ccc;
+  text-transform: lowercase;
+}
+.sender-bubble{
+  width: auto;
+  height: auto;
+  background-color: rgb(1, 148, 134);
+  border-radius: 10px;
+  padding: 0 5px;
+}
+.sender-text{
+  color: #fff;
+  font-size: 15px;
+  padding: 5px;
+}
+.chat-img{
+  margin-top: 15px;
+  display: block;
+}
+.sender-img{
+  margin-top: 20px;
+}
+.time-text{
+  font-size: 12px;
+  font-weight: bold;
+  color: #2d2d2d;
+  text-align: center;
+}
+.date-text{
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  color: #019486;
+}
