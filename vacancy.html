@@ -17,7 +17,7 @@
       <div class="">
         <nav class="nav nav-extended">
           <div class="nav-wrapper">
-            <a href="#" class="brand-logo">Settings</a>
+            <a href="#" class="brand-logo">My Vacancies</a>
             <ul id="slide-out" class="side-nav">
               <li><div class="user-view">
                 <div class="background">
@@ -46,46 +46,21 @@
       </div>
 
       <div class="container pull-down">
-         <div class="row">
-           <div class="col s1">
-             <i class="material-icons">notifications_outline</i>
-           </div>
-           <div class="col s9 setting-list">
-             <h6 class="setting-item">Notification Tone</h6>
-           </div>
-           <div class="col s2">
-             <div class="switch">
-               <label>
-                 <input type="checkbox">
-                 <span class="lever"></span>
-               </label>
-             </div>
-           </div>
-         </div>
-         <div class="row">
-           <div class="col s1">
-             <i class="material-icons">help_outline</i>
-           </div>
-           <div class="col s10 setting-list">
-             <h6 class="setting-item">Help</h6>
-           </div>
-         </div>
-         <div class="row">
-           <div class="col s1">
-             <i class="material-icons">info_outline</i>
-           </div>
-           <div class="col s10 setting-list">
-             <h6 class="setting-item">About poso</h6>
-           </div>
-         </div>
-         <div class="row">
-           <div class="col s1">
-             <i class="material-icons">person_outline</i>
-           </div>
-           <div class="col s10 setting-list">
-             <h6 class="setting-item">deactivate account</h6>
-           </div>
-         </div>
+        <ul class="collection">
+          <li class="collection-item vacancy-item avatar">
+            <div class="col s2">
+              <img src="img/fnb-logo.jpg" alt="" class="circle">
+            </div>
+            <div class="col s10">
+              <span class="title">Teller</span>
+              <p>FNB - Part Time <br>
+                Thohoyandou <br>
+                R10 000 <br>
+                22 Nov 2017 - 21 Mar 2018
+              </p>
+            </div>
+          </li>
+        </ul>
       </div>
 
 
@@ -95,6 +70,10 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
       <script type="text/javascript">
         $(".button-collapse").sideNav();
+
+        $(".vacancy-item").on('click', function(){
+             window.location = "vacancy-detail.html";
+        });
       </script>
     </body>
   </html>
