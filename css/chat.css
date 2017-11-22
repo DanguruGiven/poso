@@ -48,3 +48,40 @@
   text-align: center;
   color: #019486;
 }
+
+
+.message-type-box {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 45px;
+  width: 100%;
+  background-color: #fff;
+  border-top: 1px solid rgba(0,0,0,0.14);
+
+}
+.message-type-box textarea {
+  border: 0px solid transparent;
+  resize: none !important;
+  overflow: auto;
+  border-bottom: 0px solid transparent !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+.message-type-box textarea:focus {
+  outline:none;
+} 
+
+.message-type-box .input-field textarea {
+  position: inherit;
+  margin-top: 0 !important;
+} 
+
+.message-type-box .input-field .prefix {
+  position: absolute;
+  width: 3rem;
+  padding: 0.8rem 1rem;
+  font-size: 1.5rem;
+  -webkit-transition: color .2s;
+  transition: color .2s;
+}
