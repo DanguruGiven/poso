@@ -15,6 +15,13 @@ body{}
   left: -2px;
   /*font-size: 25px;*/
 }
+/*.collection-notification{
+  margin: 5px 0;
+  border: 1px solid transparent;
+  position: relative;
+  border-bottom: 2px solid #ccc;
+  padding: 0;
+}*/
 .splashscreen{
   width: 100%;
   height: 100%;
@@ -26,6 +33,9 @@ body{}
   margin-top: 10px;
   margin-left: auto;
   margin-right: auto;
+}
+.collection .collection-item{
+  margin-top: 10px;
 }
 .square{
   /*border: 2px solid #fff;*/
@@ -58,7 +68,7 @@ body{}
 }
 .tabs .tab a:hover, .tabs .tab a.active{
   background-color: transparent;
-  color: #019486
+  color: #019486;
 }
 .pull-right{
   float: right;
@@ -81,11 +91,32 @@ body{}
   padding: 0;
   text-transform: capitalize;
 }
+.collection{
+  border: 1px solid transparent;
+}
 .collection .collection-item{
   border-radius: 1px solid #ccc;
+  margin: 0;
+}
+.collection .notification-item.avatar{
+  min-height: auto;
+  height: auto;
+  padding-bottom: 0;
+}
+.collection .vacancy-item.avatar{
+  min-height: auto;
+  height: auto;
+  padding-bottom: 0;
+}
+.collection .collection-item:last-child{
+  border-bottom: 1px solid #ccc;
 }
 .title{
   font-weight: bold;
+}
+.message-item{
+  width: 100%;
+  border-bottom: 1px solid #ccc;
 }
 /*Drawer Stylesheet*/
 .background{
@@ -108,10 +139,19 @@ body{}
   text-transform: capitalize;
 }
 /*Vacancy Stylesheet*/
+.vacancy-item{
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+}
+.bottom-section{
+  margin-top: 320px;
+}
 .profile-header{
+  width: 100%;
+  height: auto;
   background-color: #019486;
-  margin-top: 56.49px;
-  padding-top: 10px;
+  /*margin-top: 56.49px;*/
+  /*padding-top: 10px;*/
 }
 .profile-header-img{
   display: block;
@@ -131,6 +171,35 @@ body{}
   font-weight: 500;
   text-align: center;
   color: #fff;
-  padding-bottom: 10px;
+  /*padding-bottom: 10px;*/
   margin-top: -3px;
+}
+.btn-vacancy{
+  width: 100%;
+  height: 35px;
+  border: 0px solid transparent;
+  color: #fff;
+  background-color:#019486;
+  text-transform: uppercase;
+  bottom: 0;
+  position: fixed;
+}
+.vacancy-details{
+  padding-bottom: 35px;
+}
+.add-vacancy-form{
+  margin-top: 75px;
+}
+
+/*Notitfication Stylesheet*/
+.notification-item{
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+}
+.btn-delete-notification{
+  width: auto;
+  margin: auto;
+  border: 2px solid transparent;
+  background-color: transparent;
+  color: #e53935
 }

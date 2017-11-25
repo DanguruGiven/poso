@@ -15,43 +15,49 @@
 
     <body>
 
-      <nav class="nav nav-extended">
-        <div class="nav-wrapper">
-          <a href="#" class="brand-logo">message</a>
-          <ul id="slide-out" class="side-nav">
-            <li><div class="user-view">
-              <div class="background">
-                <img src="img/header_image.jpg">
+      <div class="">
+        <nav class="nav nav-extended">
+          <div class="nav-wrapper">
+            <a href="#" class="brand-logo">Message</a>
+            <ul id="slide-out" class="side-nav">
+              <li><div class="user-view">
+                <div class="background">
+                  <img src="img/header_image.jpg">
+                </div>
+                <a href="#!user"><img class="circle" src="img/fnb-logo.jpg"></a>
+                <a href="#!name"><span class="white-text name">FNB</span></a>
+                <a href="#!email"><span class="white-text email">fnb@gmail.com</span></a>
+              </div></li>
+              <div class="container">
+                <ul>
+                  <li><a><i class="material-icons">home</i> Home</a></li>
+                  <li><a><i class="material-icons">person_outline</i> My Profile</a></li>
+                  <li><a href="vacancy.html"><i class="material-icons">work</i> My Vacancies</a></li>
+                  <li><a href="message.html"><i class="material-icons">chat</i> Message</a></li>
+                  <li><a><i class="material-icons">subscriptions</i> Subscription</a></li>
+                  <li><a href="notification.html"><i class="material-icons">notifications</i> Notification</a></li>
+                  <li><a href="setting.html"><i class="material-icons">settings</i> Settings</a></li>
+                  <li><a href="login.html"><i class="material-icons">exit_to_app</i> Sign Out</a></li>
+                </ul>
               </div>
-              <a href="#!user"><img class="circle" src="img/fnb-logo.jpg"></a>
-              <a href="#!name"><span class="white-text name">FNB</span></a>
-              <a href="#!email"><span class="white-text email">fnb@gmail.com</span></a>
-            </div></li>
-            <div class="container">
-              <ul>
-                <li><a><i class="material-icons">home</i> Home</a></li>
-                <li><a><i class="material-icons">person_outline</i> My Profile</a></li>
-                <li><a href="vacancy.html"><i class="material-icons">work</i> My Vacancies</a></li>
-                <li><a href="message.html"><i class="material-icons">chat</i> Message</a></li>
-                <li><a><i class="material-icons">subscriptions</i> Subscription</a></li>
-                <li><a><i class="material-icons">notifications</i> Notification</a></li>
-                <li><a href="setting.html"><i class="material-icons">settings</i> Settings</a></li>
-                <li><a href="login.html"><i class="material-icons">exit_to_app</i> Sign Out</a></li>
-              </ul>
-            </div>
-          </ul>
-          <a href="#" data-activates="slide-out" class="button-collapse"><span class="flaticon-menu-button prefix flaticon-position"></span></a>
-        </div>
-      </nav>
+            </ul>
+            <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+          </div>
+        </nav>
+      </div>
 
       <div class="container">
         <ul class="collection">
           <li class="collection-item message-item avatar">
-            <img src="img/profile_user.jpg" alt="" class="circle">
-            <span class="title">Given Danguru</span>
-            <p>Even at this stage, I hope I’ve demonstrated how Pusher and React work well together.
-            </p>
-            <span class="pull-right">Today 13:50</span>
+            <div class="col s2">
+              <img src="img/profile_user.jpg" alt="" class="circle">
+            </div>
+            <div class="col s10">
+              <span class="title">Given Danguru</span>
+              <p>Even at this stage, I hope I’ve demonstrated how Pusher and React work well together.
+              </p>
+              <span class="pull-right">Today 13:50</span>
+            </div>
           </li>
         </ul>
       </div>
@@ -60,7 +66,7 @@
       <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
       <script type="text/javascript" src="js/materialize.min.js"></script>
-      <script type="text/javascript" src="js/jquery.js"></script>
+      <!-- <script type="text/javascript" src="js/jquery.js"></script> -->
       <script>
         $(".button-collapse").sideNav();
 
