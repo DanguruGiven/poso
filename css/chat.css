@@ -1,15 +1,8 @@
-.receiver-bubble{
-  width: auto;
-  height: auto;
-  background-color: #ccc;
-  border-radius: 10px;
-  padding: 0 5px;
+
+.container#messages{
+   margin-bottom: 50px;
 }
-.reciever-text{
-  color: #2d2d2d;
-  font-size: 15px;
-  padding: 5px;
-}
+
 .last-seen-title{
   text-align: center;
   font-size: 12px;
@@ -17,25 +10,7 @@
   color: #ccc;
   text-transform: lowercase;
 }
-.sender-bubble{
-  width: auto;
-  height: auto;
-  background-color: rgb(1, 148, 134);
-  border-radius: 10px;
-  padding: 0 5px;
-}
-.sender-text{
-  color: #fff;
-  font-size: 15px;
-  padding: 5px;
-}
-.chat-img{
-  margin-top: 15px;
-  display: block;
-}
-.sender-img{
-  margin-top: 20px;
-}
+
 .time-text{
   font-size: 12px;
   font-weight: bold;
@@ -75,6 +50,7 @@
 .message-type-box .input-field textarea {
   position: inherit;
   margin-top: 0 !important;
+  width: calc(100% - 10rem) !important;
 } 
 
 .message-type-box .input-field .prefix {
@@ -84,4 +60,66 @@
   font-size: 1.5rem;
   -webkit-transition: color .2s;
   transition: color .2s;
+}
+
+/* send button */
+.message-type-box a {
+  display: inline-block;
+  position: inherit;
+  padding: 12px;
+  right: 6px;
+}
+
+.message-type-box a i {
+  font-size: 1.5rem !important;
+}
+
+ a#upload-menu{
+  right: 50px;
+  transform: rotate(45deg)
+}
+
+.message-type-box a i {
+  display: inline !important;
+}
+
+.chat {
+  list-style-type: none;
+  width: 100%;
+}
+
+.chat__bubble {
+  margin-bottom: 3px;
+  padding: 5px 10px;
+  clear: both;
+  border-radius: 10px 10px 2px 2px ;
+  max-width: 80%;
+}
+
+.chat__bubble--rcvd {
+  background: #f2f2f2;
+  color: black;
+  float: left;
+  border-bottom-right-radius: 10px;
+}
+
+.chat__bubble--sent {
+  background: rgb(1, 148, 134);
+  color: white;
+  float: right;
+  border-bottom-left-radius: 10px;
+}
+
+.chat__bubble--sent + .chat__bubble--sent {
+  border-top-right-radius: 2px;
+}
+
+.chat__bubble--rcvd + .chat__bubble--rcvd {
+  border-top-left-radius: 2px;
+}
+
+.chat__bubble--stop {
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  margin-bottom: 20px;
 }

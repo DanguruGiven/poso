@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="/js/jquery.rsa_id_validator.js"></script>
+
+    <style>
+        .widget-profile {
+            position: relative;
+            background-color: #fff;
+            border-radius: 3px;
+        }
+
+        .widget-profile .avatar-lg {
+            width: 130px;
+            margin-bottom: 10px;
+            position: relative;
+            display: inline-block;
+            white-space: nowrap;
+            vertical-align: bottom;
+            border-radius: 1000px;
+        }
+
+        .avatar-lg img {
+            width: 100%;
+            max-width: 100%;
+            height: 130px;
+            border: 4px solid #fab416;
+            border-radius: 1000px;
+            overflow: hidden;
+        }
+
+        .avatar-lg input[type="file"] {
+            cursor: pointer;
+            display: block;
+            height: 100%;
+            left: 0;
+            opacity: 0 !important;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+
+
+        .avatar-lg .picture-src {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="widget-profile text-center">
+
+        <div class="avatar-lg">
+            <img class="img-responsive picture-src" id="wizardPicturePreview" src="http://cohenwoodworking.com/wp-content/uploads/2016/09/image-placeholder-500x500.jpg"
+                alt="">
+            <input type="file" name="avatar" id="wizard-picture">
+        </div>
+
+    </div>
+
+    <!-- 
+       displayValid: [true,"IDNo Valid","IDNo InValid"],  //Display Validation Results
+displayDate: [true,"Date of Birth: "],  //Displays Date of Birth
+displayAge: [true,"Age: "],  //Displays Age
+displayGender: [true,"Gender: Male","Gender: Female"],  //Displays Gender
+displayCitizenship: [true,"Citizenship: South African","Citizenship: Foreign Citizenship"],  //Displays Citizenship
+displayValid_id: "id_results",  // Controls where Validation result is displayed
+displayDate_id: "id_results",  // Controls where Date of Birth result is displayed
+displayAge_id: "id_results",  // Controls where Age result is displayed
+displayGender_id: "id_results",  // Controls where Gender result is displayed
+displayCitizenship_id: "id_results"   // Controls where Citizenship result is displayed
+
+
+    -->
+    <form>
+        ID:
+        <input type="text" name="idno" id="idno" />
+        <br>
+        Date of Birth:
+        <input disabled type="text" name="idno" id="dob" />
+        <br>
+        Age:
+        <input disabled type="text" name="idno" id="age" />
+        <br>
+        Gender:
+        <input disabled type="text" name="idno" id="gender" />
+        <br>
+        Citizenship: 
+        <input disabled type="text" name="idno" id="citizen" />
+        <div id="id_results"></div>
+    </form>
+
+
+
+
+    <script>
+        $().ready(function () {
+            // Prepare the preview for profile picture
+            $("#wizard-picture").change(function () {
+                readURL(this);
+            });
+
+
+            $('#idno').rsa_id_validator({
+                displayValid: [true, "IDNo Valid", "IDNo InValid"], //Display Validation Results
+                displayDate: [true, ""], //Displays Date of Birth
+                displayAge: [true, ""], //Displays Age
+                displayGender: [true, "Male", "Female"], //Displays Gender
+                displayCitizenship: [true, "South African",
+                    "Foreign Citizenship"
+                ], //Displays Citizenship
+                displayValid_id: "id_results", // Controls where Validation result is displayed
+                displayDate_id: "dob", // Controls where Date of Birth result is displayed
+                displayAge_id: "age", // Controls where Age result is displayed
+                displayGender_id: "gender", // Controls where Gender result is displayed
+                displayCitizenship_id: "citizen" // Controls where Citizenship result is displayed
+
+            });
+
+            function readURL(input) {
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+
+                    reader.onload = function (e) {
+                        $('#wizardPicturePreview').attr('src', e.target.result).fadeIn('slow');
+                        console.log(e.target);
+
+                    }
+                    reader.readAsDataURL(input.files[0]);
+
+                }
+            }
+
+        });
+    </script>
+
+</body>
+
+</html>
